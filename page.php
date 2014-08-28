@@ -30,49 +30,126 @@
 	</section>
 	<!-- //ABOUT -->
 
-	<!-- CV -->
-	<section id="work" class="work">
-		<div class="blackbar">
-			<div class="cvtriangle span_1_of_12">
-			  		<h4><a href="#!" onclick="toggleHeight(this, 550); return false">
-			  			View<br>Portfolio<br> +/-
-						</a>
-			  		</h4>
-			</div>
-			<section id="folio" class="container folio expandable">
-					<?php $loop = new WP_Query( array( 'post_type' => 'portfolio', 'posts_per_page' => 3 ) ); ?>
-					<?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
-						<div class="item span_4_of_12">
-							<h2><?php the_title(); ?></h2>
-							<div class="itemThumb"><?php the_post_thumbnail('medium'); ?></div>
-							<p class="client"><?php the_field('client_name'); ?></p> 
-							<div class="shortDesc">
-							  <?php the_field('description'); ?>
-							</div>
-							<!-- <?php the_content(); ?> -->
+	<!-- WORK -->
+
+	<section class="work">
+		<a id="work"></a>
+			<div class="blackbar">
+			<section id="folio" class="container folio">
+				<h1>My Work</h1>
+					<div class="skills">
+						
+							<h6>Tech Specs</h6>
+						
+						<!-- HTML5 -->
+						<div class="skill span_2_of_12">
+						<svg width="45px" height="45px" viewBox="0 0 32 32">
+							<path d="M1.892 0l2.567 28.801 11.524 3.199 11.554-3.204 2.572-28.796h-28.216zM24.52 9.42h-13.517l0.322 3.617h12.874l-0.97 10.844-7.245 2.008-7.237-2.008-0.495-5.547h3.547l0.252 2.82 3.933 1.060 0.009-0.002 3.935-1.062 0.408-4.58h-12.242l-0.953-10.681h17.694l-0.316 3.532z" fill="#FFF"></path>
+						</svg>
+						<p>HTML5</p>
 						</div>
-					<?php endwhile; wp_reset_query(); ?>
+
+						<!-- CSS3 -->
+						<div class="skill span_2_of_12">
+						<svg width="45px" height="45px" viewBox="0 0 32 32">
+							<path d="M4.762 1.516l-1.074 5.373h21.867l-0.684 3.47h-21.881l-1.059 5.372h21.865l-1.219 6.127-8.813 2.919-7.638-2.919 0.523-2.658h-5.372l-1.278 6.448 12.632 4.834 14.563-4.834 4.805-24.133z" fill="#FFF"></path>
+						</svg>
+						<p>CSS3</p>
+						</div>
+
+						<!-- JS -->
+						<div class="skill span_2_of_12">
+						<svg width="45px" height="45px" viewBox="0 0 32 32">
+							<path d="M1,1v30h30V1H1zM17.326,24.398c0,2.92-1.712,4.248-4.209,4.248c-2.255,0-3.564-1.168-4.229-2.576l0,0l0,0l0,0l2.296-1.391c0.443,0.777,0.846,1.442,1.812,1.442c0.926,0,1.511-0.354,1.511-1.771V14.77h2.819V24.398zM23.992,28.646c-2.618,0-4.311-1.248-5.135-2.879l2.295-1.328c0.604,0.979,1.39,1.711,2.779,1.711c1.168,0,1.904-0.584,1.904-1.396c0-0.966-0.766-1.311-2.054-1.865L23.08,22.58c-2.034-0.865-3.383-1.953-3.383-4.249c0-2.114,1.604-3.726,4.128-3.726c1.792,0,3.081,0.625,4.008,2.254l-2.19,1.406c-0.479-0.861-1.006-1.209-1.812-1.209c-0.825,0-1.353,0.521-1.353,1.209c0,0.852,0.521,1.188,1.729,1.711l0.704,0.309c2.396,1.021,3.746,2.07,3.746,4.43C28.664,27.259,26.671,28.646,23.992,28.646z" fill="#FFF"></path>
+						</svg>
+						<p>JavaScript</p>
+						</div>
+
+						<!-- jQuery -->
+						<div class="skill span_2_of_12">
+						<svg width="45px" height="45px" viewBox="0 0 32 32">
+							<path d="M10.322,23.041C4.579,18.723,2.777,11.07,5.494,4.583c-0.254,0.291-0.502,0.59-0.739,0.904c-5.177,6.887-4.008,16.505,2.613,21.482c6.62,4.979,16.184,3.432,21.362-3.455c0.237-0.314,0.454-0.635,0.663-0.959C23.915,26.963,16.064,27.357,10.322,23.041zM13.662,18.598c4.765,3.582,11.604,2.564,15.567-2.198c-3.609,2.641-9.09,2.475-13.361-0.736S9.916,7.231,11.451,3.03C7.976,8.161,8.897,15.015,13.662,18.598zM18.642,11.976c3.254,2.447,8.146,1.438,10.967-2.242c-2.604,1.921-6.341,1.955-9.157-0.164c-2.819-2.118-3.826-5.718-2.701-8.754C14.998,4.549,15.387,9.528,18.642,11.976z" fill="#FFF"></path>
+						</svg>
+						<p>jQuery</p>
+						</div>
+						<!-- InDesign -->
+						<div class="skill span_2_of_12">
+						<svg width="45px" height="45px" viewBox="0 0 28 28">
+							<path fill="#fff" d="M15.277,12.351c-1.225,0-1.862,1.098-1.862,2.465c0,1.472,0.729,2.393,1.845,2.393c0.779,0,1.399-0.533,1.562-1.294
+							c0.051-0.196,0.07-0.39,0.07-0.62V14.16c0-0.143-0.021-0.337-0.035-0.48C16.695,12.952,16.111,12.351,15.277,12.351z"/>
+							<path fill="#fff" d="M25.926,0H0l0,0v26l0,0h26l0,0L25.926,0L25.926,0z M8.98,19.158H6.269V7.208H8.98V19.158z M17.268,19.158l-0.125-1.274
+							h-0.037c-0.551,0.974-1.594,1.472-2.713,1.472c-2.059,0-3.706-1.756-3.706-4.453c-0.018-2.924,1.809-4.609,3.883-4.609
+							c1.064,0,1.897,0.373,2.285,0.975h0.037V6.569h2.694v9.998c0,0.979,0.034,2.007,0.069,2.592H17.268z"/>
+						</svg>
+						<p>InDesign</p>
+						</div>
+
+						<!-- Photoshop -->
+						<div class="skill span_2_of_12">
+						<svg width="45px" height="45px" viewBox="0 0 28 28">
+							<path fill="#fff" d="M8.784,7.368c-0.659,0-1.106,0.064-1.34,0.129v4.232c0.279,0.064,0.617,0.084,1.085,0.084c1.725,0,2.79-0.872,2.79-2.339 C11.318,8.158,10.402,7.368,8.784,7.368z"/>
+							<path fill="#fff" d="M26-0.049H0l0,0V26l0,0l26-0.034l0,0V-0.049L26-0.049z M13.212,12.792c-1.106,1.042-2.748,1.51-4.661,1.51 c-0.428,0-0.81-0.021-1.109-0.064v5.129H4.226V5.222c1.002-0.169,2.405-0.296,4.388-0.296c2,0,3.428,0.381,4.385,1.148 c0.92,0.725,1.534,1.915,1.534,3.318S14.063,11.984,13.212,12.792z M18.06,19.577c-1.364,0-2.577-0.296-3.365-0.724l0.573-2.317 c0.597,0.359,1.833,0.786,2.792,0.786c0.978,0,1.383-0.338,1.383-0.872c0-0.532-0.319-0.785-1.53-1.192 c-2.151-0.722-2.982-1.891-2.961-3.125c0-1.933,1.659-3.405,4.236-3.405c1.214,0,2.299,0.279,2.938,0.596l-0.574,2.235 c-0.469-0.255-1.361-0.595-2.26-0.595c-0.784,0-1.229,0.319-1.229,0.851c0,0.489,0.4,0.743,1.678,1.192
+							c1.981,0.68,2.812,1.681,2.833,3.208C22.573,18.151,21.038,19.577,18.06,19.577z"/>
+						</svg>
+						<p>Photoshop</p>
+						</div>
+
+					</div>
+					
+					<?php $loop = new WP_Query( array( 'post_type' => 'portfolio', 'posts_per_page' => 4 ) ); ?>
+					<div class="pieces">
+						<?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+							<div class="item paper-raise span_6_of_12">
+								<h2><?php the_title(); ?></h2>
+								<div class="span_12_of_12">
+									<a href="<?php the_field('live_url'); ?>" target="_blank">
+										<?php the_post_thumbnail(); ?>
+									</a>
+								</div>
+								<p class="client">
+									<svg width="16px" height="68px" viewBox="0 0 33.936 88.75" enable-background="new 0 0 33.936 88.75" xml:space="preserve">
+									<g id="Layer_9">
+										<path fill="#F35F55" d="M33.936,88.75H23.225c-6.744,0-12.5-4.205-12.5-14.59V56.971c0-6.197-7.94-6.893-10.725-6.893V38.68
+											c2.783,0,10.725-0.693,10.725-6.898V14.493C10.725,4.102,16.18,0,23.516,0h10.42v11.393h-4.86c-6.056,0-6.449,3.693-6.449,6.395
+											v16.099c-0.099,9.294-5.75,9.989-9.924,10.396v0.19c4.175,0.308,9.825,1.008,9.924,10.304v16.188c0,2.698,0.396,6.394,6.449,6.394
+											h4.86V88.75z"/>
+									</g>
+									</svg>
+									<!-- <?php the_field('client_name'); ?> -->
+									<?php $terms = wp_get_post_terms($post->ID,'technologies');
+										 if ( !empty( $terms ) && !is_wp_error( $terms ) ){
+										 	$i = 0;
+										 	$len = count($terms);
+										     foreach ( $terms as $term ) {
+										       if ($i == $len - 1) {
+										       	echo $term->name;
+										       }
+										       else {
+										       	echo $term->name . ", ";
+										       }
+										       $i++;
+										     }
+										 } ?>
+									</p>
+								
+								<p>
+									
+								</p>
+								<div class="shortDesc">
+								  <?php the_field('description'); ?>
+								</div>
+								<!-- <?php the_content(); ?> -->
+							</div>
+						<?php endwhile; wp_reset_query(); ?>
+					</div>
 			</section>
+				
+				<div class="cvTriangle">
+					<div class="cvText"><a href="portfolio/pdf/NCooperCV2014.pdf" target="_blank"><p>Download<br>My CV</p></a></div>
+				</div>
 
-			<section class="container cv">	
-				<!-- PDF \\ -->
-				<a href="pdf/NCooperCV2014.pdf" target="_blank"><div class="cvthumb">
-				</div></a> 
-				<!-- // PDF -->
-				<h3>Front-End Web Developer<br>and Designer in Toronto</h3>
-				<p>
-					Tenacious worker with strong leadership qualities<br>
-					Team oriented; well-developed interpersonal skills<br>
-					Clear and thorough communicator <br>
-					Strong attention for detail<br>
-				</p>
-			</section>
-
-
-		<!--<div class="cvtriangle">
-				<p>&nbsp;</p>
-			</div> -->
-		</div> 
+			</div>
+		
 	</section>
 	<!-- // CV -->
 
